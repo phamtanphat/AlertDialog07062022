@@ -58,6 +58,17 @@ public class FastFood {
         this.drinks = drinks;
     }
 
+    @Override
+    public String toString() {
+        return "FastFood{" +
+                "desserts=" + desserts +
+                ", boxMeals=" + boxMeals +
+                ", riceMeals=" + riceMeals +
+                ", snacks=" + snacks +
+                ", drinks=" + drinks +
+                '}';
+    }
+
     public static class BuilderFood implements Builder {
         private Desserts desserts;
         private BoxMeals boxMeals;
