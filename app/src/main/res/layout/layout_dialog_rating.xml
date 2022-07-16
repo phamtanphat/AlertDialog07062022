@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:src="@drawable/icon_logo_rating"
+        android:id="@+id/image_view_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_view_title_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:maxWidth="400dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:maxLines="2"
+        android:textSize="30sp"
+        android:id="@+id/text_view_title_rating"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_view_logo"
+        app:layout_constraintBottom_toTopOf="@id/rating_bar"
+        android:text="How was your experience with us"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <RatingBar
+        android:layout_marginTop="20dp"
+        android:id="@+id/rating_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_title_rating"
+        app:layout_constraintBottom_toTopOf="@id/text_view_never_button"
+        android:numStars="5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        android:textSize="20sp"
+        android:textColor="#AAA9A9"
+        android:text="Never"
+        app:layout_constraintEnd_toStartOf="@id/view_space"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rating_bar"
+        android:id="@+id/text_view_never_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@id/text_view_maybe_later_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/text_view_never_button"
+        app:layout_constraintTop_toBottomOf="@id/rating_bar"
+        android:id="@+id/view_space"
+        android:layout_width="50dp"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textColor="#FF4282"
+        android:text="Maybe Later"
+        app:layout_constraintTop_toBottomOf="@id/rating_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_space"
+        android:id="@+id/text_view_maybe_later_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

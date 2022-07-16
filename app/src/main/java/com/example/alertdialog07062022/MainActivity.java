@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                 builder.setTitle("Thông báo");
                 builder.setMessage("Ứng dụng cần nâng cấp lên phiên bản mới!!!");
+                builder.setCancelable(false);
                 builder.setIcon(R.mipmap.ic_launcher);
 
                 // Action
