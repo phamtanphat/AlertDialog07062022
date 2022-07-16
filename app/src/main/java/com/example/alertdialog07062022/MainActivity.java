@@ -54,5 +54,27 @@ public class MainActivity extends AppCompatActivity {
                 builder.show();
             }
         });
+
+        btnOpenCustomDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogUtils.openRatingDialog(MainActivity.this, new DialogUtils.EventListenerRatingDialog() {
+                    @Override
+                    public void onClickNeverButton() {
+                        Toast.makeText(MainActivity.this, "Click Never", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onClickMaybeLaterButton() {
+                        Toast.makeText(MainActivity.this, "Click Maybe", Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onRatingChanged(float rating) {
+                        Toast.makeText(MainActivity.this, "Rating value: " + rating, Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+        });
     }
 }
